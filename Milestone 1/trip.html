@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="View your saved NOMI stay, itinerary, experiences and travel challenges."
+    >
+
+    <title>My Trip | NOMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="MS1.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            NOMI
+            <span>Stay. Explore. Discover.</span>
+        </a>
+
+        <nav id="navigation">
+            <a href="stays.html">Stays</a>
+            <a href="experiences.html">Things to Do</a>
+            <a href="itinerary.html">Free Trip Planner</a>
+            <a href="treasure-hunt.html">Treasure Hunt</a>
+            <a href="trip.html" class="active">My Trip</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                type="button"
+                class="outline-btn"
+                onclick="openLogin()"
+            >
+                Log In
+            </button>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become a Partner
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Premium My Trip Banner -->
+        <section class="page-banner trip-banner">
+
+            <div class="page-banner-content">
+
+                <span class="eyebrow">
+                    YOUR NOMI JOURNEY
+                </span>
+
+                <h1>
+                    One place for
+                    <em>the whole adventure.</em>
+                </h1>
+
+                <p>
+                    Your stay, itinerary, saved experiences
+                    and challenges — all together in one trip.
+                </p>
+
+                <a
+                    href="#myTrip"
+                    class="banner-btn"
+                >
+                    View My Trip
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Trip Overview -->
+        <section
+            class="section"
+            id="myTrip"
+        >
+
+            <div class="trip-overview">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        YOUR UPCOMING TRIP
+                    </span>
+
+                    <h2 id="tripDestination">
+                        Your NOMI Adventure
+                    </h2>
+
+                    <p id="tripDetails">
+                        Start building your trip
+                        by choosing a destination.
+                    </p>
+
+                </div>
+
+
+                <div class="trip-overview-actions">
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        onclick="window.location.href='itinerary.html'"
+                    >
+                        ✦ Plan a Trip
+                    </button>
+
+                    <button
+                        type="button"
+                        class="outline-btn"
+                        onclick="window.print()"
+                    >
+                        Print Trip
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Trip Stats -->
+            <div class="trip-stats">
+
+                <div class="trip-stat">
+
+                    <span>
+                        DESTINATION
+                    </span>
+
+                    <strong id="tripStatDestination">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="trip-stat">
+
+                    <span>
+                        DAYS
+                    </span>
+
+                    <strong id="tripStatDays">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="trip-stat">
+
+                    <span>
+                        TRAVELERS
+                    </span>
+
+                    <strong id="tripStatTravelers">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="trip-stat">
+
+                    <span>
+                        SAVED ACTIVITIES
+                    </span>
+
+                    <strong id="tripStatActivities">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- My Stay -->
+        <section class="section soft-background">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        MY STAY
+                    </span>
+
+                    <h2>
+                        Where you're staying.
+                    </h2>
+
+                </div>
+
+                <a
+                    href="stays.html"
+                    class="text-link"
+                >
+                    Browse stays →
+                </a>
+
+            </div>
+
+
+            <!-- Saved stay appears here -->
+            <div id="myStayContainer">
+
+                <div class="empty-state">
+
+                    <div class="empty-state-icon">
+                        🏡
+                    </div>
+
+                    <h3>
+                        No stay selected yet.
+                    </h3>
+
+                    <p>
+                        Find a place to stay
+                        and add it to your trip.
+                    </p>
+
+                    <a
+                        href="stays.html"
+                        class="primary-btn"
+                    >
+                        Find a Stay
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- My Itinerary -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        MY ITINERARY
+                    </span>
+
+                    <h2>
+                        Your adventure, day by day.
+                    </h2>
+
+                </div>
+
+                <a
+                    href="itinerary.html"
+                    class="text-link"
+                >
+                    Create itinerary →
+                </a>
+
+            </div>
+
+
+            <!-- Saved itinerary appears here -->
+            <div id="savedItineraryContainer">
+
+                <div class="empty-state">
+
+                    <div class="empty-state-icon">
+                        🗓
+                    </div>
+
+                    <h3>
+                        No itinerary saved yet.
+                    </h3>
+
+                    <p>
+                        Use the free trip planner
+                        to create your itinerary.
+                    </p>
+
+                    <a
+                        href="itinerary.html"
+                        class="primary-btn"
+                    >
+                        Create Itinerary
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Saved Experiences -->
+        <section class="section soft-background">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        SAVED EXPERIENCES
+                    </span>
+
+                    <h2>
+                        Things you want to do.
+                    </h2>
+
+                </div>
+
+                <a
+                    href="experiences.html"
+                    class="text-link"
+                >
+                    Find things to do →
+                </a>
+
+            </div>
+
+
+            <!-- Saved cards appear here -->
+            <div
+                class="experience-grid"
+                id="savedExperiencesGrid"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="emptyExperiences"
+            >
+
+                <div class="empty-state-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Nothing saved yet.
+                </h3>
+
+                <p>
+                    Explore activities and save
+                    the ones you want to try.
+                </p>
+
+                <a
+                    href="experiences.html"
+                    class="primary-btn"
+                >
+                    Explore Things to Do
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Treasure Hunt -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        TREASURE HUNT
+                    </span>
+
+                    <h2>
+                        Your NOMI Challenge.
+                    </h2>
+
+                </div>
+
+                <a
+                    href="treasure-hunt.html"
+                    class="text-link"
+                >
+                    Open Treasure Hunt →
+                </a>
+
+            </div>
+
+
+            <div class="trip-hunt-card">
+
+                <div class="trip-hunt-icon">
+                    ✦
+                </div>
+
+
+                <div class="trip-hunt-content">
+
+                    <span class="eyebrow dark">
+                        NOMI TREASURE HUNT
+                    </span>
+
+                    <h3 id="tripHuntName">
+                        No active challenge
+                    </h3>
+
+                    <p id="tripHuntDescription">
+                        Choose a Treasure Hunt challenge
+                        to start.
+                    </p>
+
+
+                    <div class="hunt-progress-bar">
+
+                        <div
+                            class="hunt-progress-fill"
+                            id="tripHuntProgress"
+                            style="width: 0%;"
+                        ></div>
+
+                    </div>
+
+
+                    <p id="tripHuntProgressText">
+                        Not started
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="outline-btn"
+                        onclick="window.location.href='treasure-hunt.html'"
+                    >
+                        Explore Treasure Hunts
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Trip Checklist -->
+        <section class="section soft-background">
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    BEFORE YOU GO
+                </span>
+
+                <h2>
+                    Trip Checklist
+                </h2>
+
+                <p>
+                    A few things to remember
+                    before your adventure begins.
+                </p>
+
+            </div>
+
+
+            <div class="trip-checklist">
+
+                <!-- Accommodation -->
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        id="checkStay"
+                    >
+
+                    <span class="custom-check"></span>
+
+                    <div>
+                        <strong>
+                            Accommodation
+                        </strong>
+
+                        <p>
+                            Confirm your stay
+                            and check-in details.
+                        </p>
+                    </div>
+
+                </label>
+
+
+                <!-- Transportation -->
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        id="checkTransport"
+                    >
+
+                    <span class="custom-check"></span>
+
+                    <div>
+                        <strong>
+                            Transportation
+                        </strong>
+
+                        <p>
+                            Plan how you will reach
+                            your destination.
+                        </p>
+                    </div>
+
+                </label>
+
+
+                <!-- Activities -->
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        id="checkActivities"
+                    >
+
+                    <span class="custom-check"></span>
+
+                    <div>
+                        <strong>
+                            Activities
+                        </strong>
+
+                        <p>
+                            Save the places
+                            you want to visit.
+                        </p>
+                    </div>
+
+                </label>
+
+
+                <!-- Budget -->
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        id="checkBudget"
+                    >
+
+                    <span class="custom-check"></span>
+
+                    <div>
+                        <strong>
+                            Travel Budget
+                        </strong>
+
+                        <p>
+                            Prepare your travel budget
+                            before your trip.
+                        </p>
+                    </div>
+
+                </label>
+
+
+                <!-- Essentials -->
+                <label class="checklist-item">
+
+                    <input
+                        type="checkbox"
+                        id="checkEssentials"
+                    >
+
+                    <span class="custom-check"></span>
+
+                    <div>
+                        <strong>
+                            Travel Essentials
+                        </strong>
+
+                        <p>
+                            Pack your IDs, chargers
+                            and other essentials.
+                        </p>
+                    </div>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- Explore More -->
+        <section class="treasure-section">
+
+            <div>
+
+                <span class="eyebrow">
+                    KEEP EXPLORING
+                </span>
+
+                <h2>
+                    Your next discovery<br>
+                    is waiting.
+                </h2>
+
+                <p>
+                    Find more activities and experiences
+                    to add to your NOMI trip.
+                </p>
+
+                <button
+                    type="button"
+                    class="light-btn"
+                    onclick="window.location.href='experiences.html'"
+                >
+                    Discover More
+                </button>
+
+            </div>
+
+
+            <div
+                class="treasure-key"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+
+            <a
+                href="home.html"
+                class="footer-logo"
+            >
+                NOMI
+            </a>
+
+            <p>
+                Stay. Explore. Discover.<br>
+                Made for discovering the Philippines.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Explore
+            </strong>
+
+            <a href="stays.html">
+                Stays
+            </a>
+
+            <a href="experiences.html">
+                Things to Do
+            </a>
+
+            <a href="itinerary.html">
+                Free Trip Planner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                NOMI
+            </strong>
+
+            <a href="treasure-hunt.html">
+                Treasure Hunt
+            </a>
+
+            <a
+                href="#"
+                onclick="becomePartner(); return false;"
+            >
+                Become a Partner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Your Trip
+            </strong>
+
+            <a href="trip.html">
+                My Trip
+            </a>
+
+            <a href="login.html">
+                Log In
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Toast -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="MS1.js"></script>
+
+</body>
+
+</html>

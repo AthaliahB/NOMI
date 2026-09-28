@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Discover local stays around the Philippines with NOMI."
+    >
+
+    <title>Local Stays | NOMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="MS1.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            NOMI
+            <span>Stay. Explore. Discover.</span>
+        </a>
+
+        <nav id="navigation">
+            <a href="stays.html" class="active">Stays</a>
+            <a href="experiences.html">Things to Do</a>
+            <a href="itinerary.html">Free Trip Planner</a>
+            <a href="treasure-hunt.html">Treasure Hunt</a>
+            <a href="trip.html">My Trip</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                type="button"
+                class="outline-btn"
+                onclick="openLogin()"
+            >
+                Log In
+            </button>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become a Partner
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Premium Stays Banner -->
+        <section class="page-banner stays-banner">
+
+            <div class="page-banner-content">
+
+                <span class="eyebrow">
+                    STAY WITH NOMI
+                </span>
+
+                <h1>
+                    Find a place
+                    <em>that feels like yours.</em>
+                </h1>
+
+                <p>
+                    Thoughtful stays in destinations worth discovering.
+                    Find your place, settle in and explore what is nearby.
+                </p>
+
+                <a href="#staySearch" class="banner-btn">
+                    Explore Stays
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Stay Search -->
+        <section class="section" id="staySearch">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow dark">
+                        FIND YOUR STAY
+                    </span>
+
+                    <h2>
+                        Where will you stay?
+                    </h2>
+                </div>
+
+                <p>
+                    Choose your destination and find a place
+                    that fits your trip.
+                </p>
+
+            </div>
+
+
+            <div class="filter-bar">
+
+                <select
+                    id="stayDestination"
+                    aria-label="Choose destination"
+                >
+                    <option value="all">All Destinations</option>
+                    <option value="Baguio">Baguio</option>
+                    <option value="La Union">La Union</option>
+                    <option value="Tagaytay">Tagaytay</option>
+                    <option value="Manila">Manila</option>
+                    <option value="Cebu">Cebu</option>
+                    <option value="Bohol">Bohol</option>
+                    <option value="Siargao">Siargao</option>
+                    <option value="Puerto Princesa">Puerto Princesa</option>
+                </select>
+
+
+                <select
+                    id="stayGuests"
+                    aria-label="Number of guests"
+                >
+                    <option value="0">Any Guests</option>
+                    <option value="2">2 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="6">6+ Guests</option>
+                </select>
+
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    onclick="filterStays()"
+                >
+                    Search Stays
+                </button>
+
+            </div>
+
+
+            <!-- Prototype Notice -->
+            <div class="demo-notice">
+
+                <strong>
+                    NOMI Prototype
+                </strong>
+
+                <p>
+                    The stays shown here are sample accommodations
+                    used to demonstrate how NOMI works.
+                </p>
+
+            </div>
+
+
+            <!-- Stay Results -->
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow dark">
+                        PLACES TO STAY
+                    </span>
+
+                    <h2>
+                        Explore local stays.
+                    </h2>
+                </div>
+
+                <p>
+                    Choose a stay and discover attractions
+                    and activities around the destination.
+                </p>
+
+            </div>
+
+
+            <!-- Stay cards are added by JavaScript -->
+            <div
+                class="stay-grid"
+                id="stayGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- How It Works -->
+        <section class="section soft-background">
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    MORE THAN A STAY
+                </span>
+
+                <h2>
+                    Your trip starts here.
+                </h2>
+
+                <p>
+                    Find somewhere to stay, explore nearby places
+                    and save everything to your NOMI trip.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Stay Local
+                    </h3>
+
+                    <p>
+                        Discover accommodations in different
+                        destinations around the Philippines.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Explore Nearby
+                    </h3>
+
+                    <p>
+                        Find attractions and activities
+                        around your destination.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Build Your Trip
+                    </h3>
+
+                    <p>
+                        Save your stay and activities
+                        together in My Trip.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Discover Local
+                    </h3>
+
+                    <p>
+                        Explore more places around
+                        your chosen destination.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Free Trip Planner -->
+        <section class="planner-banner">
+
+            <div class="planner-content">
+
+                <span class="eyebrow">
+                    FREE NOMI TRIP PLANNER
+                </span>
+
+                <h2>
+                    Found your destination?
+                </h2>
+
+                <p>
+                    Use NOMI's free planner to create
+                    an itinerary for your trip.
+                </p>
+
+                <button
+                    type="button"
+                    class="light-btn"
+                    onclick="window.location.href='itinerary.html'"
+                >
+                    ✦ Create My Free Itinerary
+                </button>
+
+            </div>
+
+
+            <div class="planner-preview">
+
+                <div class="mini-card">
+
+                    <span>
+                        BUILD YOUR NOMI TRIP
+                    </span>
+
+                    <h3>
+                        Stay + Explore
+                    </h3>
+
+
+                    <div class="timeline-item">
+
+                        <strong>
+                            🏡 YOUR STAY
+                        </strong>
+
+                        <p>
+                            Choose where you will stay
+                            during your trip.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <strong>
+                            📍 NEARBY
+                        </strong>
+
+                        <p>
+                            Discover attractions and activities
+                            around your destination.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <strong>
+                            ✦ YOUR ITINERARY
+                        </strong>
+
+                        <p>
+                            Put everything together
+                            into one travel plan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Become a Host -->
+        <section class="partner-section">
+
+            <span class="eyebrow dark">
+                NOMI FOR HOSTS
+            </span>
+
+            <h2>
+                Have a place travelers would love?
+            </h2>
+
+            <p>
+                NOMI welcomes local homestays, apartments,
+                villas, hostels, hotels and other accommodations.
+            </p>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                List Your Stay
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+
+            <a
+                href="home.html"
+                class="footer-logo"
+            >
+                NOMI
+            </a>
+
+            <p>
+                Stay. Explore. Discover.<br>
+                Made for discovering the Philippines.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Explore
+            </strong>
+
+            <a href="stays.html">
+                Stays
+            </a>
+
+            <a href="experiences.html">
+                Things to Do
+            </a>
+
+            <a href="itinerary.html">
+                Free Trip Planner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                NOMI
+            </strong>
+
+            <a href="treasure-hunt.html">
+                Treasure Hunt
+            </a>
+
+            <a
+                href="#"
+                onclick="becomePartner(); return false;"
+            >
+                Become a Partner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Your Trip
+            </strong>
+
+            <a href="trip.html">
+                My Trip
+            </a>
+
+            <a href="login.html">
+                Log In
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Toast -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="MS1.js"></script>
+
+</body>
+
+</html>

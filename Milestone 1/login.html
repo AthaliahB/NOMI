@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Log in to NOMI and manage your Philippine travel adventures."
+    >
+
+    <title>Log In | NOMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="MS1.css">
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            NOMI
+            <span>Stay. Explore. Discover.</span>
+        </a>
+
+        <nav id="navigation">
+            <a href="stays.html">Stays</a>
+            <a href="experiences.html">Things to Do</a>
+            <a href="itinerary.html">Free Trip Planner</a>
+            <a href="treasure-hunt.html">Treasure Hunt</a>
+            <a href="trip.html">My Trip</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a
+                href="login.html"
+                class="outline-btn active"
+            >
+                Log In
+            </a>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become a Partner
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- Login Page -->
+    <main class="auth-page">
+
+        <!-- Left Side -->
+        <section class="auth-visual">
+
+            <div class="auth-visual-overlay"></div>
+
+            <div class="auth-visual-content">
+
+                <span class="eyebrow">
+                    WELCOME TO NOMI
+                </span>
+
+                <h1>
+                    Your next adventure
+                    <em>starts here.</em>
+                </h1>
+
+                <p>
+                    Save your trips, continue your itineraries
+                    and keep your Philippine adventures together
+                    in one place.
+                </p>
+
+
+                <div class="auth-features">
+
+                    <div class="auth-feature">
+
+                        <span>♡</span>
+
+                        <div>
+                            <strong>
+                                Save your favorites
+                            </strong>
+
+                            <p>
+                                Keep the places you want
+                                to discover.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <span>✦</span>
+
+                        <div>
+                            <strong>
+                                Build your trip
+                            </strong>
+
+                            <p>
+                                Keep your stays, activities
+                                and itinerary together.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <span>🗺</span>
+
+                        <div>
+                            <strong>
+                                Continue your challenges
+                            </strong>
+
+                            <p>
+                                Keep exploring NOMI
+                                Treasure Hunt challenges.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right Side -->
+        <section class="auth-form-side">
+
+            <div class="auth-form-container">
+
+                <div class="auth-heading">
+
+                    <span class="eyebrow dark">
+                        WELCOME BACK
+                    </span>
+
+                    <h2>
+                        Log in to NOMI
+                    </h2>
+
+                    <p>
+                        Continue planning your next
+                        Philippine adventure.
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+                <form
+                    class="auth-form"
+                    id="loginForm"
+                    novalidate
+                >
+
+                    <!-- Email -->
+                    <div class="auth-form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small
+                            class="form-error"
+                            id="emailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="auth-form-group">
+
+                        <div class="password-label">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                        </div>
+
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+
+                        <small
+                            class="form-error"
+                            id="passwordError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+                    <div class="remember-login">
+
+                        <label class="auth-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="primary-btn auth-submit"
+                    >
+                        Log In to NOMI
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+
+                <!-- Demo Login -->
+                <button
+                    type="button"
+                    class="auth-secondary-btn"
+                    id="demoLogin"
+                >
+                    ✦ Continue as Demo Traveler
+                </button>
+
+                <p class="demo-note">
+                    No account required. Use the demo traveler
+                    to explore NOMI's prototype features.
+                </p>
+
+
+                <!-- Sign Up -->
+                <p class="auth-switch">
+
+                    New to NOMI?
+
+                    <a
+                        href="#"
+                        onclick="showSignupMessage(); return false;"
+                    >
+                        Create an account
+                    </a>
+
+                </p>
+
+
+                <!-- Back Home -->
+                <a
+                    href="home.html"
+                    class="auth-back"
+                >
+                    ← Back to NOMI
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Notification -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="MS1.js"></script>
+
+</body>
+
+</html>
