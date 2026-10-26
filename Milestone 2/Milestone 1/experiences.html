@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Discover attractions, activities, nature, culture and local experiences around the Philippines with NOMI."
+    >
+
+    <title>Things to Do | NOMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="MS1.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            NOMI
+            <span>Stay. Explore. Discover.</span>
+        </a>
+
+        <nav id="navigation">
+            <a href="stays.html">Stays</a>
+            <a href="experiences.html" class="active">Things to Do</a>
+            <a href="itinerary.html">Free Trip Planner</a>
+            <a href="treasure-hunt.html">Treasure Hunt</a>
+            <a href="trip.html">My Trip</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button
+                type="button"
+                class="outline-btn"
+                onclick="openLogin()"
+            >
+                Log In
+            </button>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become a Partner
+            </button>
+        </div>
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Premium Banner -->
+        <section class="page-banner experiences-banner">
+
+            <div class="page-banner-content">
+
+                <span class="eyebrow">
+                    DISCOVER THE PHILIPPINES
+                </span>
+
+                <h1>
+                    See more.
+                    <em>Feel the place.</em>
+                </h1>
+
+                <p>
+                    From local landmarks to island adventures,
+                    discover experiences that bring you closer
+                    to every destination.
+                </p>
+
+                <a href="#experiences" class="banner-btn">
+                    Discover Experiences
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Things to Do -->
+        <section class="section" id="experiences">
+
+            <div class="filter-bar">
+
+                <select
+                    id="experienceDestination"
+                    aria-label="Choose destination"
+                >
+                    <option value="all">All Destinations</option>
+                    <option value="Baguio">Baguio</option>
+                    <option value="La Union">La Union</option>
+                    <option value="Tagaytay">Tagaytay</option>
+                    <option value="Manila">Manila</option>
+                    <option value="Cebu">Cebu</option>
+                    <option value="Bohol">Bohol</option>
+                    <option value="Siargao">Siargao</option>
+                    <option value="Puerto Princesa">Puerto Princesa</option>
+                </select>
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    onclick="filterExperiences()"
+                >
+                    Explore
+                </button>
+
+            </div>
+
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow dark">
+                        THINGS TO DO
+                    </span>
+
+                    <h2>
+                        Discover the Philippines.
+                    </h2>
+                </div>
+
+                <p>
+                    From mountain adventures to island escapes,
+                    explore places worth adding to your NOMI trip.
+                </p>
+
+            </div>
+
+
+            <!-- Cards are added using JavaScript -->
+            <div
+                class="experience-grid"
+                id="experienceGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- Experience Types -->
+        <section class="section soft-background">
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    FIND YOUR KIND OF ADVENTURE
+                </span>
+
+                <h2>
+                    There's more to explore.
+                </h2>
+
+                <p>
+                    Whether you want adventure or a slow afternoon,
+                    NOMI helps you discover what fits your trip.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step">
+                    <div class="step-number">🌿</div>
+
+                    <h3>Nature</h3>
+
+                    <p>
+                        Mountains, waterfalls, parks,
+                        rivers and natural wonders.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🏄</div>
+
+                    <h3>Adventure</h3>
+
+                    <p>
+                        Surfing, island hopping,
+                        outdoor adventures and more.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🏛</div>
+
+                    <h3>Culture</h3>
+
+                    <p>
+                        Discover Philippine heritage,
+                        art, history and local culture.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">☕</div>
+
+                    <h3>Local Life</h3>
+
+                    <p>
+                        Cafés, food discoveries,
+                        communities and local experiences.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Explore by Destination -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow dark">
+                        EXPLORE BY DESTINATION
+                    </span>
+
+                    <h2>
+                        Pick your next adventure.
+                    </h2>
+                </div>
+
+                <p>
+                    Eight Philippine destinations.
+                    Plenty of reasons to explore.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step">
+                    <div class="step-number">🌲</div>
+                    <h3>Baguio</h3>
+                    <p>
+                        Burnham Park • Camp John Hay •
+                        Mines View • Tam-awan Village
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🏄</div>
+                    <h3>La Union</h3>
+                    <p>
+                        Urbiztondo • Surfing •
+                        Tangadan Falls • Beach sunsets
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🌋</div>
+                    <h3>Tagaytay</h3>
+                    <p>
+                        Sky Ranch • Picnic Grove •
+                        Taal views • People's Park
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🏛</div>
+                    <h3>Manila</h3>
+                    <p>
+                        Intramuros • Fort Santiago •
+                        Rizal Park • Manila Bay
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🌴</div>
+                    <h3>Cebu</h3>
+                    <p>
+                        Magellan's Cross • Fort San Pedro •
+                        Temple of Leah • Cebu Highlands
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🍫</div>
+                    <h3>Bohol</h3>
+                    <p>
+                        Chocolate Hills • Tarsiers •
+                        Loboc River • Panglao
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🏝</div>
+                    <h3>Siargao</h3>
+                    <p>
+                        Cloud 9 • Daku Island •
+                        Guyam Island • Magpupungko
+                    </p>
+                </article>
+
+                <article class="step">
+                    <div class="step-number">🌊</div>
+                    <h3>Puerto Princesa</h3>
+                    <p>
+                        Underground River • Honda Bay •
+                        Firefly Watching
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Trip Planner -->
+        <section class="planner-banner">
+
+            <div class="planner-content">
+
+                <span class="eyebrow">
+                    BUILD YOUR NOMI TRIP
+                </span>
+
+                <h2>
+                    Found something<br>
+                    you want to see?
+                </h2>
+
+                <p>
+                    Use NOMI's free trip planner to turn your
+                    favorite attractions into a simple
+                    day-by-day Philippine itinerary.
+                </p>
+
+                <button
+                    type="button"
+                    class="light-btn"
+                    onclick="window.location.href='itinerary.html'"
+                >
+                    ✦ Create My Free Itinerary
+                </button>
+
+            </div>
+
+
+            <div class="planner-preview">
+
+                <div class="mini-card">
+
+                    <span>YOUR NOMI DAY</span>
+
+                    <h3>Explore Bohol 🍫</h3>
+
+                    <div class="timeline-item">
+                        <strong>9:00 AM</strong>
+                        <p>Philippine Tarsier Sanctuary</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <strong>11:30 AM</strong>
+                        <p>Chocolate Hills</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <strong>2:00 PM</strong>
+                        <p>Loboc River</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <strong>5:30 PM</strong>
+                        <p>Relax and enjoy your evening</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Partner Section -->
+        <section class="partner-section">
+
+            <span class="eyebrow dark">
+                LOCAL EXPERIENCE PARTNERS
+            </span>
+
+            <h2>
+                Share your experience with travelers.
+            </h2>
+
+            <p>
+                Are you a local tour guide, surf instructor,
+                boat operator, workshop host, attraction,
+                café or other tourism business?
+                NOMI is designed to connect travelers with
+                local experiences around their stay.
+            </p>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become an Experience Partner
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            <a href="home.html" class="footer-logo">
+                NOMI
+            </a>
+
+            <p>
+                Stay. Explore. Discover.<br>
+                Made for discovering the Philippines.
+            </p>
+        </div>
+
+
+        <div>
+            <strong>Explore</strong>
+
+            <a href="stays.html">Stays</a>
+            <a href="experiences.html">Things to Do</a>
+            <a href="itinerary.html">Free Trip Planner</a>
+        </div>
+
+
+        <div>
+            <strong>NOMI</strong>
+
+            <a href="treasure-hunt.html">
+                Treasure Hunt
+            </a>
+
+            <a
+                href="#"
+                onclick="becomePartner(); return false;"
+            >
+                Become a Partner
+            </a>
+        </div>
+
+
+        <div>
+            <strong>Your Trip</strong>
+
+            <a href="trip.html">My Trip</a>
+            <a href="login.html">Log In</a>
+        </div>
+
+    </footer>
+
+
+    <!-- Toast Message -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="MS1.js"></script>
+
+</body>
+
+</html>
