@@ -8,7 +8,7 @@ Repository of Group 30 | H3101
 
 ---
 
-## How to Run on Any Windows PC
+## How to Run
 
 1. **Requirement**: Make sure **[Node.js](https://nodejs.org/)** (LTS version) is installed.
 2. **Double-click `run.bat`**:
