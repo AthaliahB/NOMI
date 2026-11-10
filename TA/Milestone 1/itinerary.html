@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Create a free Philippine travel itinerary with NOMI."
+    >
+
+    <title>Free Trip Planner | NOMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="MS1.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            NOMI
+            <span>Stay. Explore. Discover.</span>
+        </a>
+
+        <nav id="navigation">
+            <a href="stays.html">Stays</a>
+            <a href="experiences.html">Things to Do</a>
+            <a href="itinerary.html" class="active">Free Trip Planner</a>
+            <a href="treasure-hunt.html">Treasure Hunt</a>
+            <a href="trip.html">My Trip</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                type="button"
+                class="outline-btn"
+                onclick="openLogin()"
+            >
+                Log In
+            </button>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become a Partner
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Premium Trip Planner Banner -->
+        <section class="page-banner planner-banner-hero">
+
+            <div class="page-banner-content">
+
+                <span class="eyebrow">
+                    YOUR JOURNEY, YOUR WAY
+                </span>
+
+                <h1>
+                    Dream it.
+                    <em>We'll help you plan it.</em>
+                </h1>
+
+                <p>
+                    Build a personalized Philippine itinerary around
+                    your destination, travel style and time.
+                </p>
+
+                <a href="#tripPlanner" class="banner-btn">
+                    Create My Itinerary
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Trip Planner -->
+        <section class="planner-page" id="tripPlanner">
+
+            <!-- Planner Introduction -->
+            <div class="planner-intro">
+
+                <span class="eyebrow dark">
+                    FREE NOMI TRIP PLANNER
+                </span>
+
+                <h1>
+                    Your trip.<br>
+                    Your way.
+                </h1>
+
+                <p>
+                    Tell NOMI where you're going and what kind
+                    of trip you want. We'll create a simple
+                    Philippine itinerary for you — completely free.
+                </p>
+
+                <div class="planner-benefits">
+                    <p>✦ Real Philippine destinations</p>
+                    <p>✦ Local attractions & activities</p>
+                    <p>✦ Personalized daily itinerary</p>
+                    <p>✦ No booking required</p>
+                </div>
+
+            </div>
+
+
+            <!-- Planner Form -->
+            <div class="planner-form-card">
+
+                <span class="eyebrow dark">
+                    TELL US ABOUT YOUR TRIP
+                </span>
+
+                <h2>
+                    Let's build your getaway.
+                </h2>
+
+
+                <form id="itineraryForm">
+
+                    <!-- Destination -->
+                    <div class="form-group">
+
+                        <label for="plannerDestination">
+                            Where are you going?
+                        </label>
+
+                        <select
+                            id="plannerDestination"
+                            required
+                        >
+                            <option value="">
+                                Choose a destination
+                            </option>
+
+                            <option value="Baguio">
+                                Baguio
+                            </option>
+
+                            <option value="La Union">
+                                La Union
+                            </option>
+
+                            <option value="Tagaytay">
+                                Tagaytay
+                            </option>
+
+                            <option value="Manila">
+                                Manila
+                            </option>
+
+                            <option value="Cebu">
+                                Cebu
+                            </option>
+
+                            <option value="Bohol">
+                                Bohol
+                            </option>
+
+                            <option value="Siargao">
+                                Siargao
+                            </option>
+
+                            <option value="Puerto Princesa">
+                                Puerto Princesa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Days and Travelers -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="plannerDays">
+                                How many days?
+                            </label>
+
+                            <select id="plannerDays">
+                                <option value="2">
+                                    2 Days
+                                </option>
+
+                                <option value="3" selected>
+                                    3 Days
+                                </option>
+
+                                <option value="4">
+                                    4 Days
+                                </option>
+
+                                <option value="5">
+                                    5 Days
+                                </option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="plannerTravelers">
+                                Who are you traveling with?
+                            </label>
+
+                            <select id="plannerTravelers">
+                                <option value="Solo">
+                                    Solo
+                                </option>
+
+                                <option value="Couple" selected>
+                                    Couple
+                                </option>
+
+                                <option value="Friends">
+                                    Friends
+                                </option>
+
+                                <option value="Family">
+                                    Family
+                                </option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Travel Style -->
+                    <div class="form-group">
+
+                        <label for="plannerStyle">
+                            What's your travel style?
+                        </label>
+
+                        <select id="plannerStyle">
+
+                            <option value="mixed">
+                                ✨ Mix of Everything
+                            </option>
+
+                            <option value="chill">
+                                ☕ Chill & Relaxed
+                            </option>
+
+                            <option value="adventure">
+                                🏄 Adventure
+                            </option>
+
+                            <option value="culture">
+                                🏛 Culture & Heritage
+                            </option>
+
+                            <option value="nature">
+                                🌿 Nature
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Budget -->
+                    <div class="form-group">
+
+                        <label for="plannerBudget">
+                            What's your travel budget?
+                        </label>
+
+                        <select id="plannerBudget">
+
+                            <option value="Budget Friendly">
+                                ₱ Budget Friendly
+                            </option>
+
+                            <option value="Mid-range" selected>
+                                ₱₱ Mid-range
+                            </option>
+
+                            <option value="Premium">
+                                ₱₱₱ Premium
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn full-button"
+                    >
+                        ✦ Create My Free Itinerary
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- Generated Itinerary -->
+        <section
+            class="generated-itinerary hidden"
+            id="generatedItinerary"
+        >
+
+            <div class="itinerary-heading">
+
+                <span class="eyebrow dark">
+                    YOUR NOMI ITINERARY
+                </span>
+
+                <h2 id="itineraryTitle">
+                    Your Philippine Getaway
+                </h2>
+
+                <p id="itinerarySubtitle">
+                    Your personalized NOMI trip.
+                </p>
+
+            </div>
+
+
+            <!-- JavaScript adds itinerary here -->
+            <div
+                class="itinerary-days"
+                id="itineraryDays"
+            ></div>
+
+
+            <div class="itinerary-actions">
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    onclick="saveItinerary()"
+                >
+                    ♡ Save My Trip
+                </button>
+
+                <button
+                    type="button"
+                    class="outline-btn"
+                    onclick="window.print()"
+                >
+                    Print Itinerary
+                </button>
+
+                <button
+                    type="button"
+                    class="outline-btn"
+                    onclick="window.location.href='stays.html'"
+                >
+                    Find a Stay
+                </button>
+
+                <button
+                    type="button"
+                    class="outline-btn"
+                    onclick="window.location.href='experiences.html'"
+                >
+                    Explore Activities
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Destinations -->
+        <section class="section soft-background">
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    WHERE WILL YOU GO?
+                </span>
+
+                <h2>
+                    Plan around the Philippines.
+                </h2>
+
+                <p>
+                    NOMI currently creates itineraries
+                    for eight local destinations.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step">
+                    <div class="step-number">🌲</div>
+
+                    <h3>Baguio</h3>
+
+                    <p>
+                        Pines, cafés, parks and
+                        Cordilleran culture.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🏄</div>
+
+                    <h3>La Union</h3>
+
+                    <p>
+                        Surfing, waterfalls,
+                        beaches and sunsets.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🌋</div>
+
+                    <h3>Tagaytay</h3>
+
+                    <p>
+                        Cool weather, scenic views
+                        and weekend escapes.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🏛</div>
+
+                    <h3>Manila</h3>
+
+                    <p>
+                        Philippine history,
+                        heritage and city life.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🌴</div>
+
+                    <h3>Cebu</h3>
+
+                    <p>
+                        Heritage, city adventures
+                        and tropical escapes.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🍫</div>
+
+                    <h3>Bohol</h3>
+
+                    <p>
+                        Chocolate Hills, wildlife
+                        and countryside adventures.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🏝</div>
+
+                    <h3>Siargao</h3>
+
+                    <p>
+                        Surfing, island hopping
+                        and tropical adventures.
+                    </p>
+                </article>
+
+
+                <article class="step">
+                    <div class="step-number">🌊</div>
+
+                    <h3>Puerto Princesa</h3>
+
+                    <p>
+                        Underground rivers,
+                        islands and nature.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- How It Works -->
+        <section class="section">
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    SIMPLE & FREE
+                </span>
+
+                <h2>
+                    How your itinerary works.
+                </h2>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Choose a place
+                    </h3>
+
+                    <p>
+                        Pick the Philippine destination
+                        you want to explore.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Tell us your style
+                    </h3>
+
+                    <p>
+                        Choose your trip length,
+                        travelers, budget and travel style.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Get your itinerary
+                    </h3>
+
+                    <p>
+                        NOMI organizes attractions into
+                        an easy day-by-day plan.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Make it yours
+                    </h3>
+
+                    <p>
+                        Save, print and continue exploring
+                        stays and activities.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reminder -->
+        <section class="partner-section">
+
+            <span class="eyebrow dark">
+                TRAVEL YOUR WAY
+            </span>
+
+            <h2>
+                Your itinerary is a starting point.
+            </h2>
+
+            <p>
+                NOMI's free itinerary gives you ideas for organizing
+                your trip. Opening hours, entrance requirements,
+                availability, travel times and fees may change,
+                so always check with the attraction before visiting.
+            </p>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="window.location.href='experiences.html'"
+            >
+                Explore Things to Do
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+
+            <a
+                href="home.html"
+                class="footer-logo"
+            >
+                NOMI
+            </a>
+
+            <p>
+                Stay. Explore. Discover.<br>
+                Made for discovering the Philippines.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Explore
+            </strong>
+
+            <a href="stays.html">
+                Stays
+            </a>
+
+            <a href="experiences.html">
+                Things to Do
+            </a>
+
+            <a href="itinerary.html">
+                Free Trip Planner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                NOMI
+            </strong>
+
+            <a href="treasure-hunt.html">
+                Treasure Hunt
+            </a>
+
+            <a
+                href="#"
+                onclick="becomePartner(); return false;"
+            >
+                Become a Partner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Your Trip
+            </strong>
+
+            <a href="trip.html">
+                My Trip
+            </a>
+
+            <a href="login.html">
+                Log In
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Notification -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="MS1.js"></script>
+
+</body>
+
+</html>
