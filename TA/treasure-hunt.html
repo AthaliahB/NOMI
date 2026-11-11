@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Complete destination challenges and unlock NOMI achievements while exploring the Philippines."
+    >
+
+    <title>Treasure Hunt | NOMI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="MS1.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            NOMI
+            <span>Stay. Explore. Discover.</span>
+        </a>
+
+        <nav id="navigation">
+            <a href="stays.html">Stays</a>
+            <a href="experiences.html">Things to Do</a>
+            <a href="itinerary.html">Free Trip Planner</a>
+            <a href="treasure-hunt.html" class="active">Treasure Hunt</a>
+            <a href="trip.html">My Trip</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                type="button"
+                class="outline-btn"
+                onclick="openLogin()"
+            >
+                Log In
+            </button>
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="becomePartner()"
+            >
+                Become a Partner
+            </button>
+
+        </div>
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Premium Treasure Hunt Banner -->
+        <section class="page-banner treasure-banner">
+
+            <div class="page-banner-content">
+
+                <span class="eyebrow">
+                    NOMI TREASURE HUNT
+                </span>
+
+                <h1>
+                    Don't just visit.
+                    <em>Make it an adventure.</em>
+                </h1>
+
+                <p>
+                    Take on destination challenges, explore local
+                    places and unlock achievements along the way.
+                </p>
+
+                <button
+                    type="button"
+                    class="banner-btn"
+                    onclick="scrollToHunts()"
+                >
+                    View Challenges
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- How It Works -->
+        <section class="section">
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Complete a NOMI Challenge
+                </h2>
+
+                <p>
+                    Each destination has a different challenge
+                    for you to complete.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <article class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Choose
+                    </h3>
+
+                    <p>
+                        Choose a destination challenge
+                        that you want to try.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Complete
+                    </h3>
+
+                    <p>
+                        Follow the instructions and
+                        complete your challenge.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Submit
+                    </h3>
+
+                    <p>
+                        Answer the questions or upload
+                        the required photo or video.
+                    </p>
+
+                </article>
+
+
+                <article class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Unlock
+                    </h3>
+
+                    <p>
+                        Finish the challenge and unlock
+                        your NOMI achievement.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Available Challenges -->
+        <section
+            class="section soft-background"
+            id="availableHunts"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        AVAILABLE CHALLENGES
+                    </span>
+
+                    <h2>
+                        Choose Your Adventure
+                    </h2>
+
+                </div>
+
+                <p>
+                    Try a different challenge
+                    for every destination.
+                </p>
+
+            </div>
+
+
+            <div class="hunt-grid">
+
+                <!-- Baguio -->
+                <article class="hunt-card">
+
+                    <img
+                        src="images/strawberry.avif"
+                        alt="Strawberry farm in La Trinidad"
+                        class="hunt-card-image"
+                    >
+
+                    <div class="hunt-card-content">
+
+                        <div class="hunt-card-top">
+                            <span class="hunt-status">
+                                PHOTO CHALLENGE
+                            </span>
+
+                            <span>
+                                📍 LA TRINIDAD
+                            </span>
+                        </div>
+
+                        <p class="eyebrow dark">
+                            🍓 BAGUIO SIDE TRIP
+                        </p>
+
+                        <h3>
+                            Strawberry Picking Challenge
+                        </h3>
+
+                        <p>
+                            Try the strawberry-picking experience
+                            and upload a photo after completing
+                            your challenge.
+                        </p>
+
+                        <div class="hunt-meta">
+                            📷 Photo • 🍓 Strawberry Picking
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="hunt-start-btn"
+                        onclick="startTreasureHunt('Baguio')"
+                    >
+                        Start Challenge
+                    </button>
+
+                </article>
+
+
+                <!-- Manila -->
+                <article class="hunt-card">
+
+                    <img
+                        src="images/intranight.jpeg"
+                        alt="Intramuros at night"
+                        class="hunt-card-image"
+                    >
+
+                    <div class="hunt-card-content">
+
+                        <div class="hunt-card-top">
+                            <span class="hunt-status">
+                                QUESTION QUEST
+                            </span>
+
+                            <span>
+                                📍 MANILA
+                            </span>
+                        </div>
+
+                        <p class="eyebrow dark">
+                            🏛️ INTRAMUROS
+                        </p>
+
+                        <h3>
+                            Intramuros Question Quest
+                        </h3>
+
+                        <p>
+                            Explore Intramuros and answer questions
+                            about its history and landmarks.
+                        </p>
+
+                        <div class="hunt-meta">
+                            ❓ Questions • 🏛️ History
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="hunt-start-btn"
+                        onclick="startTreasureHunt('Manila')"
+                    >
+                        Start Question Quest
+                    </button>
+
+                </article>
+
+
+                <!-- Cebu -->
+                <article class="hunt-card">
+
+                    <img
+                        src="images/cebusafari.jpg"
+                        alt="Cebu animal adventure"
+                        class="hunt-card-image"
+                    >
+
+                    <div class="hunt-card-content">
+
+                        <div class="hunt-card-top">
+                            <span class="hunt-status">
+                                ANIMAL QUEST
+                            </span>
+
+                            <span>
+                                📍 CEBU
+                            </span>
+                        </div>
+
+                        <p class="eyebrow dark">
+                            🦁 CEBU
+                        </p>
+
+                        <h3>
+                            Animal Quest
+                        </h3>
+
+                        <p>
+                            Get an animal mission, find the assigned
+                            animal and upload a photo.
+                        </p>
+
+                        <div class="hunt-meta">
+                            🐾 Animal • 📷 Photo
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="hunt-start-btn"
+                        onclick="startTreasureHunt('Cebu')"
+                    >
+                        Start Animal Quest
+                    </button>
+
+                </article>
+
+
+                <!-- Bohol -->
+                <article class="hunt-card">
+
+                    <img
+                        src="images/tarsier.jpg"
+                        alt="Philippine tarsier"
+                        class="hunt-card-image"
+                    >
+
+                    <div class="hunt-card-content">
+
+                        <div class="hunt-card-top">
+                            <span class="hunt-status">
+                                PHOTO CHALLENGE
+                            </span>
+
+                            <span>
+                                📍 BOHOL
+                            </span>
+                        </div>
+
+                        <p class="eyebrow dark">
+                            🐒 BOHOL
+                        </p>
+
+                        <h3>
+                            Tarsier Spotting Challenge
+                        </h3>
+
+                        <p>
+                            Responsibly observe a tarsier during
+                            your visit and upload a photo
+                            from your experience.
+                        </p>
+
+                        <div class="hunt-meta">
+                            📷 Photo • 🌿 Wildlife
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="hunt-start-btn"
+                        onclick="startTreasureHunt('Bohol')"
+                    >
+                        Start Challenge
+                    </button>
+
+                </article>
+
+
+                <!-- La Union -->
+                <article class="hunt-card">
+
+                    <img
+                        src="images/urbiztondo.jpg"
+                        alt="Surfing in La Union"
+                        class="hunt-card-image"
+                    >
+
+                    <div class="hunt-card-content">
+
+                        <div class="hunt-card-top">
+                            <span class="hunt-status">
+                                VIDEO CHALLENGE
+                            </span>
+
+                            <span>
+                                📍 LA UNION
+                            </span>
+                        </div>
+
+                        <p class="eyebrow dark">
+                            🏄 LA UNION
+                        </p>
+
+                        <h3>
+                            Elyu Surf Challenge
+                        </h3>
+
+                        <p>
+                            Try surfing in La Union and upload
+                            a short video from your experience.
+                        </p>
+
+                        <div class="hunt-meta">
+                            🎥 Video • 🏄 Surf
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="hunt-start-btn"
+                        onclick="startTreasureHunt('La Union')"
+                    >
+                        Start Surf Challenge
+                    </button>
+
+                </article>
+
+
+                <!-- Siargao -->
+                <article class="hunt-card">
+
+                    <img
+                        src="images/cloud.jpg"
+                        alt="Surfing in Siargao"
+                        class="hunt-card-image"
+                    >
+
+                    <div class="hunt-card-content">
+
+                        <div class="hunt-card-top">
+                            <span class="hunt-status">
+                                VIDEO CHALLENGE
+                            </span>
+
+                            <span>
+                                📍 SIARGAO
+                            </span>
+                        </div>
+
+                        <p class="eyebrow dark">
+                            🌊 SIARGAO
+                        </p>
+
+                        <h3>
+                            Island Surf Challenge
+                        </h3>
+
+                        <p>
+                            Try surfing in Siargao and upload
+                            a short video from your experience.
+                        </p>
+
+                        <div class="hunt-meta">
+                            🎥 Video • 🏄 Surf
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="hunt-start-btn"
+                        onclick="startTreasureHunt('Siargao')"
+                    >
+                        Start Surf Challenge
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Active Challenge -->
+        <section
+            class="section hidden"
+            id="activeHunt"
+        >
+
+            <div class="center-heading">
+
+                <span class="eyebrow dark">
+                    ACTIVE CHALLENGE
+                </span>
+
+                <h2 id="huntTitle">
+                    NOMI Challenge
+                </h2>
+
+                <p id="huntDescription">
+                    Complete the challenge below.
+                </p>
+
+            </div>
+
+
+            <div class="challenge-shell">
+
+                <!-- Challenge -->
+                <div class="challenge-card">
+
+                    <div
+                        class="challenge-icon"
+                        id="challengeIcon"
+                    >
+                        ✦
+                    </div>
+
+                    <span
+                        class="eyebrow dark"
+                        id="challengeType"
+                    >
+                        CHALLENGE
+                    </span>
+
+                    <h3 id="challengeTitle">
+                        Your Challenge
+                    </h3>
+
+                    <p
+                        class="challenge-description"
+                        id="challengeText"
+                    >
+                        Challenge instructions will appear here.
+                    </p>
+
+
+                    <!-- Manila Quiz -->
+                    <div
+                        id="quizChallenge"
+                        class="challenge-mode hidden"
+                    >
+
+                        <p
+                            class="quiz-progress"
+                            id="quizProgress"
+                        >
+                            Question 1 of 3
+                        </p>
+
+                        <h3 id="quizQuestion">
+                            Question
+                        </h3>
+
+                        <div
+                            class="quiz-options"
+                            id="quizOptions"
+                        ></div>
+
+                        <button
+                            type="button"
+                            class="primary-btn full-button"
+                            onclick="submitQuizAnswer()"
+                        >
+                            Submit Answer
+                        </button>
+
+                    </div>
+
+
+                    <!-- Photo Challenge -->
+                    <div
+                        id="photoChallenge"
+                        class="challenge-mode hidden"
+                    >
+
+                        <label
+                            for="challengePhoto"
+                            class="upload-box"
+                        >
+                            <span class="upload-icon">
+                                📷
+                            </span>
+
+                            <strong>
+                                Upload Photo
+                            </strong>
+
+                            <span>
+                                Choose a photo from your device
+                            </span>
+                        </label>
+
+                        <input
+                            type="file"
+                            id="challengePhoto"
+                            accept="image/*"
+                            class="hidden"
+                            onchange="previewChallengePhoto(event)"
+                        >
+
+                        <div
+                            id="photoPreviewContainer"
+                            class="upload-preview hidden"
+                        >
+                            <img
+                                id="photoPreview"
+                                alt="Challenge photo preview"
+                            >
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn full-button"
+                            onclick="submitPhotoChallenge()"
+                        >
+                            Submit Challenge
+                        </button>
+
+                    </div>
+
+
+                    <!-- Video Challenge -->
+                    <div
+                        id="videoChallenge"
+                        class="challenge-mode hidden"
+                    >
+
+                        <label
+                            for="challengeVideo"
+                            class="upload-box"
+                        >
+                            <span class="upload-icon">
+                                🎥
+                            </span>
+
+                            <strong>
+                                Upload Surfing Video
+                            </strong>
+
+                            <span>
+                                Choose a video from your device
+                            </span>
+                        </label>
+
+                        <input
+                            type="file"
+                            id="challengeVideo"
+                            accept="video/*"
+                            class="hidden"
+                            onchange="previewChallengeVideo(event)"
+                        >
+
+                        <div
+                            id="videoPreviewContainer"
+                            class="upload-preview hidden"
+                        >
+                            <video
+                                id="videoPreview"
+                                controls
+                            ></video>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn full-button"
+                            onclick="submitVideoChallenge()"
+                        >
+                            Submit Challenge
+                        </button>
+
+                    </div>
+
+
+                    <!-- Cebu Animal Quest -->
+                    <div
+                        id="animalChallenge"
+                        class="challenge-mode hidden"
+                    >
+
+                        <div class="animal-mission">
+
+                            <p class="eyebrow dark">
+                                FIND THIS ANIMAL
+                            </p>
+
+                            <div
+                                class="animal-emoji"
+                                id="animalEmoji"
+                            >
+                                🦒
+                            </div>
+
+                            <h3 id="animalName">
+                                Giraffe
+                            </h3>
+
+                            <p>
+                                Find the animal shown above
+                                and take a photo.
+                            </p>
+
+                        </div>
+
+
+                        <label
+                            for="animalPhoto"
+                            class="upload-box"
+                        >
+                            <span class="upload-icon">
+                                📷
+                            </span>
+
+                            <strong>
+                                Upload Animal Photo
+                            </strong>
+
+                            <span>
+                                Choose a photo from your device
+                            </span>
+                        </label>
+
+                        <input
+                            type="file"
+                            id="animalPhoto"
+                            accept="image/*"
+                            class="hidden"
+                            onchange="previewAnimalPhoto(event)"
+                        >
+
+                        <div
+                            id="animalPreviewContainer"
+                            class="upload-preview hidden"
+                        >
+                            <img
+                                id="animalPreview"
+                                alt="Animal photo preview"
+                            >
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn full-button"
+                            onclick="submitAnimalChallenge()"
+                        >
+                            Submit Animal Quest
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Challenge Status -->
+                <aside class="challenge-progress-card">
+
+                    <span class="eyebrow dark">
+                        STATUS
+                    </span>
+
+                    <div
+                        class="challenge-status-icon"
+                        id="challengeStatusIcon"
+                    >
+                        ⏳
+                    </div>
+
+                    <h3 id="challengeStatus">
+                        In Progress
+                    </h3>
+
+                    <p id="challengeStatusText">
+                        Complete the challenge to unlock
+                        your achievement.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- Challenge Complete -->
+        <section
+            class="hunt-complete hidden"
+            id="huntComplete"
+        >
+
+            <div class="hunt-complete-icon">
+                ✦
+            </div>
+
+            <span class="eyebrow">
+                CHALLENGE COMPLETE
+            </span>
+
+            <h2>
+                You did it!
+            </h2>
+
+            <p>
+                You completed your NOMI challenge.
+            </p>
+
+
+            <div class="achievement-card">
+
+                <span>
+                    NOMI ACHIEVEMENT
+                </span>
+
+                <h3 id="achievementName">
+                    Local Explorer
+                </h3>
+
+                <p>
+                    ✦ ACHIEVEMENT UNLOCKED
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="light-btn"
+                onclick="resetTreasureHunt()"
+            >
+                Try Challenge Again
+            </button>
+
+        </section>
+
+
+        <!-- Prototype Note -->
+        <section class="partner-section">
+
+            <span class="eyebrow dark">
+                NOMI TREASURE HUNT
+            </span>
+
+            <h2>
+                Make your trip more memorable.
+            </h2>
+
+            <p>
+                This Treasure Hunt is part of the NOMI website prototype.
+                Uploaded photos and videos are previewed on the page
+                and are not automatically verified.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+
+            <a
+                href="home.html"
+                class="footer-logo"
+            >
+                NOMI
+            </a>
+
+            <p>
+                Stay. Explore. Discover.<br>
+                Made for discovering the Philippines.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Explore
+            </strong>
+
+            <a href="stays.html">
+                Stays
+            </a>
+
+            <a href="experiences.html">
+                Things to Do
+            </a>
+
+            <a href="itinerary.html">
+                Free Trip Planner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                NOMI
+            </strong>
+
+            <a href="treasure-hunt.html">
+                Treasure Hunt
+            </a>
+
+            <a
+                href="#"
+                onclick="becomePartner(); return false;"
+            >
+                Become a Partner
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Your Trip
+            </strong>
+
+            <a href="trip.html">
+                My Trip
+            </a>
+
+            <a href="login.html">
+                Log In
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Toast -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="MS1.js"></script>
+
+</body>
+
+</html>
