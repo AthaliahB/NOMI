@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "email": "demo@nomi.com",
+    "password": "password123",
+    "name": "Demo Traveler"
+  },
+  {
+    "id": 1793010998288,
+    "name": "mark",
+    "email": "mark@nomi.com",
+    "password": "123456"
+  }
+]
